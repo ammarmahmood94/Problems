@@ -8,10 +8,38 @@ def split_characters(m):
         return i
     
 def lengthofsubstring(p):
-    m=[]
-    print(len(p))
+    
+    m = []
+    countkeep = []
+    count = 0
+    
+    for i in p:
+        count+=1
+        if i not in m:
+            m.append(i)
+            countkeep.append(count-1)
+    return m, countkeep
+        
+def new_func(m, countkeep):
+    
+    new = []
+    new.append(0)
+    k=[]
 
-m = map(split_characters,var)
+    for i in range(len(countkeep)):
+        if i < (len(countkeep) - 1):
+            k.append(countkeep[i+1] - countkeep[i])
+        
+
+    # t = ""
+    
+    # for i in new:
+    #     t+=p[i]
+    
+    # print(f"The longest substring is: {t} and its length is: {len(new)}")
+
+m = map(split_characters, var)
 p = list(m)
-lengthofsubstring(p)
+list, counter = lengthofsubstring(p)
+new_func(list, counter)
 
