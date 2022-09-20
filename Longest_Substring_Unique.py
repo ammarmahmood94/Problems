@@ -11,8 +11,6 @@ def lengthofsubstring(p):
     m=[]
     print(len(p))
 
-
-    
 m = map(split_characters,var)
 p = list(m)
 lengthofsubstring(p)
